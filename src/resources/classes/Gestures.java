@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
 
 import javax.imageio.ImageIO;
 
@@ -16,16 +18,23 @@ import org.json.simple.parser.ParseException;
 
 public class Gestures {	
 	private String name;
-	private Hashtable<String, String> victory;
+	private Hashtable<String, String> victory = new Hashtable<String, String>();
 	//private BufferedImage image;
 	JSONArray gesture_arr = getGesturesFromJSON();
-	
 	
 	public Gestures(String name, int index) {
 		JSONObject gesture = (JSONObject) gesture_arr.get(index);
 		
 		this.name = (String) gesture.get("name");
 		
+		JSONObject json_victories = (JSONObject) gesture.get("victory");
+		Iterator<String> keys = json_victories.keySet().iterator();
+		
+		while(keys.hasNext()) {
+			String current_key = keys.next();
+			String value = (String) json_victories.get(current_key);
+			this.victory.put(current_key, value);
+		}
 	}
 
 	private JSONArray getGesturesFromJSON() {
@@ -36,9 +45,6 @@ public class Gestures {
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("C:\\Users\\jacwe\\Desktop\\Github\\RPS25\\src\\resources\\gestures\\gestures.json"));
 		
 			jsonArray = (JSONArray) jsonObject.get("gestures");
-			//JSONObject rock = (JSONObject) jsonArray.get(0);
-			//System.out.println(rock.get("name"));
-			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -52,5 +58,9 @@ public class Gestures {
 	
 	public String getName() {
 		return this.name;
+	}
+	
+	public Hashtable<String, String> getVictory() {
+		return this.victory;
 	}
 }

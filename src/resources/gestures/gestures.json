@@ -2,20 +2,20 @@
 	"gestures": [
 		{
 			"name": "Gun",
-			"victory": [
-				{ "Rock": "Gun TARGETS Rock" },
-				{ "Sun" : "Gun SHOOTS AT Sun" },
-				{ "Fire": "Gun FIRES" },
-				{ "Scissors": "Gun DESTROYS Scissors" },
-				{ "Axe": "Gun CHIPS Axe" },
-				{ "Snake": "Gun SHOOTS Snake" },
-				{ "Monkey": "Gun SHOOTS Monkey" },
-				{ "Woman": "Gun SHOOTS Woman" },
-				{ "Man": "Gun SHOOTS Man" },
-				{ "Tree": "Gun TARGETS Tree" },
-				{ "Cockroach": "Gun SHOOTS Cockroach" },
-				{ "Wolf": "Gun SHOOTS Wolf"}
-			]
+			"victory": {
+				"Rock": "Gun TARGETS Rock",
+				"Sun" : "Gun SHOOTS AT Sun",
+				"Fire": "Gun FIRES",
+				"Scissors": "Gun DESTROYS Scissors",
+				"Axe": "Gun CHIPS Axe",
+				"Snake": "Gun SHOOTS Snake",
+				"Monkey": "Gun SHOOTS Monkey",
+				"Woman": "Gun SHOOTS Woman",
+				"Man": "Gun SHOOTS Man",
+				"Tree": "Gun TARGETS Tree",
+				"Cockroach": "Gun SHOOTS Cockroach",
+				"Wolf": "Gun SHOOTS Wolf"
+			}
 		},
 		{
 			"name": "paper",

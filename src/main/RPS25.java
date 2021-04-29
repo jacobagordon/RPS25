@@ -17,6 +17,11 @@ public class RPS25 {
 
 	public static void main(String[] args) {
 		
+		Gestures[] gestures = getGestures();
+		
+	}
+	
+	private static Gestures[] getGestures() {
 		String[] names = {"Gun", "Dynamite", "Nuke", "Lightning", "Devil",
 				"Dragon", "Alien", "Water", "Bowl", "Air",
 				"Moon", "Paper", "Sponge", "Wolf", "Cockroach",
@@ -24,11 +29,11 @@ public class RPS25 {
 				"Axe", "Scissors", "Fire", "Sun", "Rock"};
 		Gestures[] gestures = new Gestures[25];
 		
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 25; i++) {
 			gestures[i] = new Gestures(names[i], i);
 		}
 		
-		System.out.println(gestures[0].getName());
+		return gestures;
 	}
 
 }
