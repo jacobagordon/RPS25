@@ -18,10 +18,412 @@
 			}
 		},
 		{
-			"name": "paper",
-			"victory": [
-				{ "rock": "Paper covers rock" }
-			]
+			"name": "Dynamite",
+			"victory": {
+				"Gun": "Dynamite OUTCLASSES Gun",
+				"Rock": "Dynamite EXPLODES Rock",
+				"Sun": "Dynamite SMOKE BLOCKS OUT Sun",
+				"Fire": "Dynamite STARTS Fire",
+				"Scissors": "Dynamite EXPLODES Scissors",
+				"Axe": "Dynamite EXPLODES Axe",
+				"Snake": "Dynamite EXPLODES Snake",
+				"Monkey": "Dynamite EXPLODES Monkey",
+				"Woman": "Dynamite EXPLODES Woman",
+				"Man": "Dynamite EXPLODES Man",
+				"Tree": "Dynamite EXPLODES Tree",
+				"Cockroach": "Dynamite EXPLODES Cockroach"
+			}
+		},
+		{
+			"name": "Nuke",
+			"victory": {
+				"Dynamite": "Nuke OUTCLASSES Dynamite",
+				"Gun": "Nuke OUTCLASSES Gun",
+				"Rock": "Nuke INCINERATES Rock",
+				"Sun": "Nuke HAS THE POWER OF THE Sun",
+				"Fire": "Nuke STARTS MASSIVE Fire",
+				"Scissors": "Nuke INCINERATES Scissors",
+				"Snake": "Nuke INCINERATES Snake",
+				"Axe": "Nuke INCINERATES Axe",
+				"Monkey": "Nuke INCINERATES Monkey",
+				"Woman": "Nuke INCINERATES Woman",
+				"Man": "Nuke INCINERATES Man",
+				"Tree": "Nuke INCINERATES Tree"
+			}
+		},
+		{
+			"name": "Lightning",
+			"victory": {
+				"Nuke": "Lightning DEFUSES Nuke",
+				"Dynamite": "Lightning IGNITES Dynamite",
+				"Gun": "Lightning MELTS Gun",
+				"Rock": "Lightning SPLITS Rock",
+				"Sun": "Lightning Storm BLOCKS Sun",
+				"Fire": "Lightning STARTS Fire",
+				"Scissors": "Lightning MELTS Scissors",
+				"Axe": "Lightning MELTS Axe",
+				"Snake": "Lightning STRIKES Snake",
+				"Monkey": "Lightning STRIKES Monkey",
+				"Woman": "Lightning STRIKES Woman",
+				"Man": "Lightning STRIKES Man"
+			}
+		},
+		{
+			"name": "Devil",
+			"victory": {
+				"Lightning": "Devil CASTS Lightning",
+				"Nuke": "Devil INSPIRES Nuke",
+				"Dynamite": "Devil INSPIRES Dynamite",
+				"Gun": "Devil INSPIRES Gun",
+				"Rock": "Devil HURLS Rock",
+				"Sun": "Devil CURSES Sun",
+				"Fire": "Devil BREATHES Fire",
+				"Scissors": "Devil IS IMMUNE TO Scissors",
+				"Axe": "Devil IS IMMUNE TO Axe",
+				"Snake": "Devil EATS Snake",
+				"Monkey": "Devil ENRAGES Monkey",
+				"Woman": "Devil TEMPTS Woman"
+			}
+		},
+		{
+			"name": "Dragon",
+			"victory": {
+				"Devil": "Dragon COMMANDS Devil",
+				"Lightning": "Dragon BREATHES Lightning",
+				"Nuke": "Dragon LIVED BEFORE Nuke",
+				"Dynamite": "Dragon FLOSSES WITH Dynamite",
+				"Gun": "Dragon IS IMMUNE TO Gun",
+				"Rock": "Dragon RESTS UPON Rock",
+				"Sun": "Dragon BLOTS OUT Sun",
+				"Fire": "Dragon BREATHES Fire",
+				"Scissors": "Dragon IS IMMUNE TO Scissors",
+				"Axe": "Dragon IS IMMUNE TO Axe",
+				"Snake": "Dragon SPAWNS Snake",
+				"Monkey": "Dragon CHARS Monkey"
+			}
+		},
+		{
+			"name": "Alien",
+			"victory": {
+				"Dragon": "Alien VAPORIZES Dragon",
+				"Devil": "Alien DOES NOT BELIEVE IN Devil",
+				"Lightning": "Alien SHOOTS Lightning",
+				"Nuke": "Alien DEFUSES Nuke",
+				"Dynamite": "Alien DEFUSES Dynamite",
+				"Gun": "Alien FORCE FIELDS Gun",
+				"Rock": "Alien VAPORIZES Rock",
+				"Sun": "Alien DESTROYS Sun",
+				"Fire": "Alien FUSES Fire",
+				"Scissors": "Alien FORCE FIELDS Scissors",
+				"Axe": "Alien FORCE FIELDS Axe",
+				"Snake": "Alien MUTATES Snake"
+			}
+		},
+		{
+			"name": "Water",
+			"victory": {
+				"Alien": "Water IS TOXIC TO Alien",
+				"Dragon": "Water DROWNS Dragon",
+				"Devil": "Water BLESSES Devil",
+				"Lightning": "Water CONDUCTS Lightning",
+				"Nuke": "Water SHORT CIRCUITS Nuke",
+				"Dynamite": "Water Douses Dynamite",
+				"Gun": "Water RUSTS Gun",
+				"Rock": "Water ERODES Rock",
+				"Sun": "Water REFLECTS Sun",
+				"Fire": "Water PUTS OUT Fire",
+				"Scissors": "Water RUSTS Scissors",
+				"Axe": "Water RUSTS Axe"
+			}
+		},
+		{
+			"name": "Bowl",
+			"victory": {
+				"Water": "Bowl CONTAINS Water",
+				"Alien": "Bowl SHAPES CRAFT OF Alien",
+				"Dragon": "Bowl DROWNS Dragon",
+				"Devil": "Bowl BLESSES Devil",
+				"Lightning": "Bowl FOCUSES Lightning",
+				"Nuke": "Bowl ENCASES CORE OF Nuke",
+				"Dynamite": "Bowl SPLASHES Dynamite",
+				"Gun": "Bowl SPLASHES Gun",
+				"Rock": "Bowl ONCE MADE OF Rock",
+				"Sun": "Bowl FOCUSES Sun",
+				"Fire": "Bowl SNUFFS OUT Fire",
+				"Scissors": "Bowl COVERS Scissors"
+			}
+		},
+		{
+			"name": "Air",
+			"victory": {
+				"Bowl": "Air TIPS OVER Bowl",
+				"Water": "Air EVAPORATES Water",
+				"Alien": "Air CHOKES Alien",
+				"Dragon": "Air FREEZES Dragon",
+				"Devil": "Air CHOKES Devil",
+				"Lightning": "Air CREATES Lightning",
+				"Nuke": "Air BLOWS ASTRAY Nuke",
+				"Dynamite": "Air BLOWS OUT Dynamite",
+				"Gun": "Air TARNISHES Gun",
+				"Rock": "Air ERODES Rock",
+				"Sun": "Air COOLS HEAT OF Sun",
+				"Fire": "Air BLOWS OUT Fire"
+			}
+		},
+		{
+			"name": "Moon",
+			"victory": {
+				"Air": "Moon HAS NO Air",
+				"Bowl": "Moon SHAPED LIKE Bowl",
+				"Water": "Moon HAS NO Water",
+				"Alien": "Moon HOUSES Alien",
+				"Dragon": "Moon SHINES ON Dragon",
+				"Devil": "Moon TERRIFIES Devil",
+				"Lightning": "Moon FAR ABOVE Lightning",
+				"Nuke": "Moon TOO FAR FOR Nuke",
+				"Dynamite": "Moon SUFFOCATES Dynamite",
+				"Gun": "Moon IMMUNE TO Gun",
+				"Rock": "Moon SHINES ON Rock",
+				"Sun": "Moon ECLIPSES Sun"
+			}
+		},
+		{
+			"name": "Paper",
+			"victory": {
+				"Moon": "Paper LAYS ON Moon",
+				"Air": "Paper FANS Air",
+				"Bowl": "Paper MACHE Bowl",
+				"Water": "Paper FLOATS ON Water",
+				"Alien": "Paper DISPROVES Alien",
+				"Dragon": "Paper REBUKES Dragon",
+				"Devil": "Paper REBUKES Devil",
+				"Lightning": "Paper DEFINES Lightning",
+				"Nuke": "Paper DEFINES Nuke",
+				"Dynamite": "Paper ENCASES Dynamite",
+				"Gun": "Paper OUTLAWS Gun",
+				"Rock": "Paper COVERS Rock"
+			}
+		},
+		{
+			"name": "Sponge",
+			"victory": {
+				"Paper": "Sponge SOAKS Paper",
+				"Moon": "Sponge LOOKS LIKE Moon",
+				"Air": "Sponge USES Air Pockets",
+				"Bowl": "Sponge CLEANS Bowl",
+				"Water": "Sponge ABSORBS Water",
+				"Alien": "Sponge INTRIGUES Alien",
+				"Dragon": "Sponge CLEANSES Dragon",
+				"Devil": "Sponge CLEANSES Devil",
+				"Lightning": "Sponge CONDUCTS Lightning",
+				"Nuke": "Sponge CLEANS Nuke",
+				"Dynamite": "Sponge SOAKS Dynamite",
+				"Gun": "Sponge CLEANS Gun"
+			}
+		},
+		{
+			"name": "Wolf",
+			"victory": {
+				"Sponge": "Wolf CHEWS UP Sponge",
+				"Paper": "Wolf CHEWS UP Paper",
+				"Moon": "Wolf HOWLS AT Moon",
+				"Air": "Wolf BREATHES Air",
+				"Bowl": "Wolf DRINKS FROM Bowl",
+				"Water": "Wolf DRINKS Water",
+				"Alien": "Wolf CHASES Alien",
+				"Dragon": "Wolf OUTRUNS Dragon",
+				"Devil": "Wolf BITES HEINY OF Devil",
+				"Lightning": "Wolf OUTRUNS Lightning",
+				"Nuke": "Wolf OUTRUNS Nuke",
+				"Dynamite": "Wolf OUTRUNS Dynamite"
+			}
+		},
+		{
+			"name": "Cockroach",
+			"victory": {
+				"Wolf": "Cockroach SLEEPS IN FUR OF Wolf",
+				"Sponge": "Cockroach NESTS ON Sponge",
+				"Paper": "Cockroach NESTS BETWEEN Papers",
+				"Moon": "Cockroach NOCTURNAL WITH Moon",
+				"Air": "Cockroach BREATHES Air",
+				"Bowl": "Cockroach HIDES UNDER Bowl",
+				"Water": "Cockroach DRINKS Water",
+				"Alien": "Cockroach SCARES Alien",
+				"Dragon": "Cockroach EATS EGGS OF Dragon",
+				"Devil": "Cockroach SCARES Devil",
+				"Lightning": "Cockroach HIDES FROM Lightning",
+				"Nuke": "Cockroach SURVIVES Nuke"
+			}
+		},
+		{
+			"name": "Tree",
+			"victory": {
+				"Cockroach": "Tree SHELTERS Cockroach",
+				"Wolf": "Tree SHELTERS Wolf",
+				"Sponge": "Tree OUTLIVES Sponge",
+				"Paper": "Tree CREATES Paper",
+				"Moon": "Tree BLOCKS Moon",
+				"Air": "Tree PRODUCES Air",
+				"Bowl": "Tree CREATES Wood Bowl",
+				"Water": "Tree DRINKS Water",
+				"Alien": "Tree ENSNARES Alien Ship",
+				"Dragon": "Tree SHELTERS Dragon",
+				"Devil": "Tree IMPRISONS Devil",
+				"Lightning": "Tree ATTRACTS Lightning"
+			}
+		},
+		{
+			"name": "Man",
+			"victory": {
+				"Tree": "Man PLANTS Tree",
+				"Cockroach": "Man STEPS ON Cockroach",
+				"Wolf": "Man TAMES Wolf",
+				"Sponge": "Man CLEANS WITH Sponge",
+				"Paper": "Man WRITES ON Paper",
+				"Moon": "Man TRAVELS TO Moon",
+				"Air": "Man BREATHES Air",
+				"Bowl": "Man EATS FROM Bowl",
+				"Water": "Man DRINKS Water",
+				"Alien": "Man DISPROVES Alien",
+				"Dragon": "Man SLAYS Dragon",
+				"Devil": "Man EXORCISES Devil"
+			}
+		},
+		{
+			"name": "Woman",
+			"victory": {
+				"Man": "Woman TEMPTS Man",
+				"Tree": "Woman PLANTS Tree",
+				"Cockroach": "Woman STEPS ON Cockroach",
+				"Wolf": "Woman TAMES Wolf",
+				"Sponge": "Woman CLEANS WITH Sponge",
+				"Paper": "Woman WRITES ON Paper",
+				"Moon": "Woman TRAVELS TO Moon",
+				"Air": "Woman BREATHES Air",
+				"Bowl": "Woman EATS FROM Bowl",
+				"Water": "Woman DRINKS Water",
+				"Alien": "Woman DISPROVES Alien",
+				"Dragon": "Woman SLAYS Dragon"
+			}
+		},
+		{
+			"name": "Monkey",
+			"victory": {
+				"Woman": "Monkey FLINGS POOP AT Woman",
+				"Man": "Monkey FLINGS POOP AT Man",
+				"Tree": "Monkey CLIMBS Tree",
+				"Cockroach": "Monkey EATS Cockroach",
+				"Wolf": "Monkey ENRAGES Wolf",
+				"Sponge": "Monkey RIPS UP Sponge",
+				"Paper": "Monkey RIPS UP Paper",
+				"Moon": "Monkey SCREECHES AT Moon",
+				"Air": "Monkey BREATHES Air",
+				"Bowl": "Monkey SMASHES Bowl",
+				"Water": "Monkey DRINKS Water",
+				"Alien": "Monkey FLINGS POOP AT Alien"
+			}
+		},
+		{
+			"name": "Snake",
+			"victory": {
+				"Monkey": "Snake BITES Monkey",
+				"Woman": "Snake BITES Woman",
+				"Man": "Snake BITES Man",
+				"Tree": "Snake LIVES IN Tree",
+				"Cockroach": "Snake EATS Cockroach",
+				"Wolf": "Snake BITES Wolf",
+				"Sponge": "Snake SWALLOWS Sponge",
+				"Paper": "Snake NESTS IN Paper",
+				"Moon": "Snake NOCTURNAL WITH Moon",
+				"Air": "Snake BREATHES Air",
+				"Bowl": "Snake SLEEPS IN Bowl",
+				"Water": "Snake DRINKS Water"
+			}
+		},
+		{
+			"name": "Axe",
+			"victory": {
+				"Snake": "Axe CHOPS Snake",
+				"Monkey": "Axe CLEAVES Monkey",
+				"Woman": "Axe CLEAVES Woman",
+				"Man": "Axe CLEAVES Man",
+				"Tree": "Axe CHOPS DOWN Tree",
+				"Cockroach": "Axe CHOPS Cockroach",
+				"Wolf": "Axe CLEAVES Wolf",
+				"Sponge": "Axe CHOPS Sponge",
+				"Paper": "Axe SLICES Paper",
+				"Moon": "Axe REFLECTS Moon",
+				"Air": "Axe FLIES THROUGH Air",
+				"Bowl": "Axe CHOPS Bowl"
+			}
+		},
+		{
+			"name": "Scissors",
+			"victory": {
+				"Axe": "Scissors SHARPER THAN Axe",
+				"Snake": "Scissors STAB Snake",
+				"Monkey": "Scissors STAB Monkey",
+				"Woman": "Scissors CUT Woman",
+				"Man": "Scissors CUT Man",
+				"Tree": "Scissors CARVE Tree",
+				"Cockroach": "Scissors STAB Cockroach",
+				"Wolf": "Scissors CUT Wolf",
+				"Sponge": "Scissors CUT UP Sponge",
+				"Paper": "Scissors CUT Paper",
+				"Moon": "Scissors REFLECT Moon",
+				"Air": "Scissors SWISH THROUGH Air"
+			}
+		},
+		{
+			"name": "Fire",
+			"victory": {
+				"Scissors": "Fire MELTS Scissors",
+				"Axe": "Fire FORGES Axe",
+				"Snake": "Fire BURNS Snake",
+				"Monkey": "Fire BURNS Monkey",
+				"Woman": "Fire BURNS Woman",
+				"Man": "Fire BURNS Man",
+				"Tree": "Fire BURNS Tree",
+				"Cockroach": "Fire BURNS Cockroach",
+				"Wolf": "Fire BURNS Wolf",
+				"Sponge": "Fire BURNS Sponge",
+				"Paper": "Fire BURNS Paper",
+				"Moon": "Fire OVERPOWERS Moonlight"
+			}
+		},
+		{
+			"name": "Sun",
+			"victory": {
+				"Fire": "Sun MADE OF Fire",
+				"Scissors": "Sun MELTS Scissors",
+				"Axe": "Sun MELTS Axe",
+				"Snake": "Sun WARMS Snake",
+				"Monkey": "Sun WARMS Monkey",
+				"Woman": "Sun WARMS Woman",
+				"Man": "Sun WARMS Man",
+				"Tree": "Sun FEEDS Tree",
+				"Cockroach": "Sun WARMS Cockroach",
+				"Wolf": "Sun WARMS Wolf",
+				"Sponge": "Sun DRIES UP Sponge",
+				"Paper": "Sun BURNS Paper"
+			}
+		},
+		{
+			"name": "Rock",
+			"victory": {
+				"Sun": "Rock SHADES Sun",
+				"Fire": "Rock POUNDS OUT Fire",
+				"Scissors": "Rock SMASHES Scissors",
+				"Axe": "Rock CHIPS Axe",
+				"Snake": "Rock CRUSHES Snake",
+				"Monkey": "Rock CRUSHES Monkey",
+				"Woman": "Rock CRUSHES Woman",
+				"Man": "Rock CRUSHES Man",
+				"Tree": "Rock BLOCKS Tree Roots",
+				"Cockroach": "Rock SQUISHES Cockroach",
+				"Wolf": "Rock CRUSHES Wolf",
+				"Sponge": "Rock CRUSHES Sponge"
+			}
 		}
 	]
 }
