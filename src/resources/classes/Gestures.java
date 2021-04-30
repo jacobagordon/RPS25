@@ -1,15 +1,10 @@
 package resources.classes;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.Set;
-
-import javax.imageio.ImageIO;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -58,6 +53,10 @@ public class Gestures {
 	
 	public String getName() {
 		return this.name;
+	}
+	
+	public String victorious(String opponent) {
+		return this.victory.get(opponent);
 	}
 	
 	public Hashtable<String, String> getVictory() {
