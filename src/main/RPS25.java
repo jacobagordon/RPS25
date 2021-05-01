@@ -1,16 +1,15 @@
 package main;
 
 import java.util.Hashtable;
-import java.util.concurrent.ThreadLocalRandom;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+
 import resources.classes.Gestures;
+import resources.classes.ButtonGenerator;
 
 
 public class RPS25 extends Application {
@@ -26,26 +25,17 @@ public class RPS25 extends Application {
 		
 		Hashtable<String, Integer> names = new Hashtable<String, Integer>();
 		Gestures[] gestures = getGestures(names);
+		ButtonGenerator buttonGen = new ButtonGenerator(gestures);
 		
 		primaryStage.setTitle("RPS 25");
-		button = new Button();
-		button.setOnAction(e -> {
-			Gestures player = gestures[ThreadLocalRandom.current().nextInt(0, 25)];
-			Gestures enemy = gestures[ThreadLocalRandom.current().nextInt(0, 25)];
-			determineWinner(player, enemy);
-		});
-		
-		Image img = new Image("file:C:\\Users\\jacwe\\Desktop\\Github\\RPS25\\src\\resources\\images\\gestures\\Gun.png");
-		ImageView view = new ImageView(img);
-		view.setFitHeight(80);
-		view.setPreserveRatio(true);
-		
-		button.setGraphic(view);
-		
 		StackPane layout = new StackPane();
-		layout.getChildren().add(button);
 		
-		Scene scene = new Scene(layout, 1000, 500);
+		for (int i=0; i<buttonGen.getNumberOfButtons(); i++) {
+			layout.getChildren().add(buttonGen.getButton(i));
+		}
+		
+		Scene scene = new Scene(layout, 1000, 1000);
+		scene.getStylesheets().add(getClass().getResource("rps.css").toExternalForm());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
@@ -64,23 +54,5 @@ public class RPS25 extends Application {
 		}
 		
 		return gestures;
-	}
-	
-	private static void determineWinner(Gestures player, Gestures enemy) {
-		
-		System.out.println("You played: " + player.getName());
-		System.out.println("They played: " + enemy.getName());
-		
-		if (player.victorious(enemy.getName()) != null) {
-			System.out.println(player.victorious(enemy.getName()));
-			System.out.println("You win!");
-		}
-		else if (enemy.victorious(player.getName()) != null) {
-			System.out.println(enemy.victorious(player.getName()));
-			System.out.println("Enemy wins.");
-		}
-		else {
-			System.out.println("Tie!");
-		}
 	}
 }

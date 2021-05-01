@@ -1,0 +1,8 @@
+.gesture-button {
+	-fx-background-radius: 10em;
+	-fx-min-width: 85px;
+	-fx-min-height: 85px;
+	-fx-max-width: 85px;
+	-fx-max-height: 85px;
+	-fx-background-color: black;
+}
