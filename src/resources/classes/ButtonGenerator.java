@@ -3,6 +3,7 @@ package resources.classes;
 import java.util.concurrent.ThreadLocalRandom;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -12,9 +13,20 @@ import resources.classes.Gestures;
 public class ButtonGenerator {
 	private double buttonLocations[][] = new double[25][2];
 	private Button[] buttonWheel = new Button[25];
+	Text player = new Text("");
+	Text enemy = new Text("");
+	Text outcome = new Text("");
+	Text winner = new Text("");
 	
 	public ButtonGenerator(Gestures[] gestures, StackPane layout) {
 		String path = "file:C:\\Users\\jacwe\\Desktop\\Github\\RPS25\\src\\resources\\images\\gestures\\";
+		
+		configureText();
+		
+		layout.getChildren().add(player);
+		layout.getChildren().add(enemy);
+		layout.getChildren().add(outcome);
+		layout.getChildren().add(winner);
 		
 		for (int a=0; a<25; a++) {
 			double theta = (Math.PI*2) / 25;
@@ -42,42 +54,32 @@ public class ButtonGenerator {
 			this.buttonWheel[i].setGraphic(view);
 			this.buttonWheel[i].setTranslateX(buttonLocations[i][0]);
 			this.buttonWheel[i].setTranslateY(buttonLocations[i][1]);
+			this.buttonWheel[i].setTooltip(new Tooltip(gestures[i].getName()));
 		}
 	}
 	
-	private static void determineWinner(Gestures player, Gestures enemy, StackPane layout) {
-		System.out.println("You played: " + player.getName());
-		Text youPlayed = new Text("You played: " + player.getName());
-		Text theyPlayed = new Text("They played: " + enemy.getName());
-		Text outcome = new Text();
-		
-		
-		System.out.println("They played: " + enemy.getName());
-		if (layout.getChildren().contains(youPlayed)) {
-			layout.getChildren().remove(0);
-			layout.getChildren().remove(1);
-			layout.getChildren().remove(2);
-		}
-		//layout.getChildren().remove(theyPlayed);
-		//layout.getChildren().remove(outcome);
+	private void determineWinner(Gestures player, Gestures enemy, StackPane layout) {
+		this.player.setText("You played: " + player.getName());
+		this.enemy.setText("They played: " + enemy.getName());
 		
 		if (player.victorious(enemy.getName()) != null) {
-			System.out.println(player.victorious(enemy.getName()));
-			System.out.println("You win!");
-			outcome.setText(player.victorious(enemy.getName()));
+			this.outcome.setText(player.victorious(enemy.getName()));
+			this.winner.setText("You Win!!");
 		}
 		else if (enemy.victorious(player.getName()) != null) {
-			System.out.println(enemy.victorious(player.getName()));
-			System.out.println("Enemy wins.");
-			outcome.setText(enemy.victorious(player.getName()));
+			this.outcome.setText(enemy.victorious(player.getName()));
+			this.winner.setText("Opponent Wins");
 		}
 		else {
-			System.out.println("Tie!");
+			this.outcome.setText("Tie!");
+			this.winner.setText("Player again");
 		}
-		
-		layout.getChildren().add(0, youPlayed);
-		layout.getChildren().add(1, theyPlayed);
-		layout.getChildren().add(2, outcome);
+	}
+	
+	private void configureText() {
+		this.enemy.setTranslateY(25);
+		this.outcome.setTranslateY(50);
+		this.winner.setTranslateY(75);
 	}
 	
 	public int getNumberOfButtons() {
