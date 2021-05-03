@@ -25,10 +25,11 @@ public class RPS25 extends Application {
 		
 		Hashtable<String, Integer> names = new Hashtable<String, Integer>();
 		Gestures[] gestures = getGestures(names);
-		ButtonGenerator buttonGen = new ButtonGenerator(gestures);
+		
+		StackPane layout = new StackPane();
+		ButtonGenerator buttonGen = new ButtonGenerator(gestures, layout);
 		
 		primaryStage.setTitle("RPS 25");
-		StackPane layout = new StackPane();
 		
 		for (int i=0; i<buttonGen.getNumberOfButtons(); i++) {
 			layout.getChildren().add(buttonGen.getButton(i));
