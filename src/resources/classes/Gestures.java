@@ -14,7 +14,6 @@ import org.json.simple.parser.ParseException;
 public class Gestures {	
 	private String name;
 	private Hashtable<String, String> victory = new Hashtable<String, String>();
-	//private BufferedImage image;
 	JSONArray gesture_arr = getGesturesFromJSON();
 	
 	public Gestures(String name, int index) {

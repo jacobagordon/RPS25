@@ -35,6 +35,8 @@ public class RPS25 extends Application {
 			layout.getChildren().add(buttonGen.getButton(i));
 		}
 		
+		layout.setStyle("-fx-background-color: linear-gradient(black, #2c2c2c, black)");
+		
 		Scene scene = new Scene(layout, 1000, 1000);
 		scene.getStylesheets().add(getClass().getResource("rps.css").toExternalForm());
 		primaryStage.setScene(scene);

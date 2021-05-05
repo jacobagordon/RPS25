@@ -6,3 +6,7 @@
 	-fx-max-height: 85px;
 	-fx-background-color: black;
 }
+
+.gesture-button-hovered {
+	-fx-background-color: gold;
+}

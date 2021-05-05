@@ -7,6 +7,7 @@ import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import resources.classes.Gestures;
 
@@ -44,7 +45,6 @@ public class ButtonGenerator {
 				Gestures enemy = gestures[ThreadLocalRandom.current().nextInt(0, 25)];
 				determineWinner(player, enemy, layout);
 			});
-			
 			Image img = new Image(path + gestures[i].getName() + ".png");
 			ImageView view = new ImageView(img);
 			view.setFitHeight(80);
@@ -55,6 +55,9 @@ public class ButtonGenerator {
 			this.buttonWheel[i].setTranslateX(buttonLocations[i][0]);
 			this.buttonWheel[i].setTranslateY(buttonLocations[i][1]);
 			this.buttonWheel[i].setTooltip(new Tooltip(gestures[i].getName()));
+		
+			this.buttonWheel[i].setOnMouseEntered(e -> this.buttonWheel[choice].getStyleClass().add("gesture-button-hovered"));
+	        this.buttonWheel[i].setOnMouseExited(e -> this.buttonWheel[choice].getStyleClass().remove("gesture-button-hovered"));
 		}
 	}
 	
@@ -72,14 +75,19 @@ public class ButtonGenerator {
 		}
 		else {
 			this.outcome.setText("Tie!");
-			this.winner.setText("Player again");
+			this.winner.setText("Play again");
 		}
 	}
-	
+
 	private void configureText() {
 		this.enemy.setTranslateY(25);
 		this.outcome.setTranslateY(50);
 		this.winner.setTranslateY(75);
+		
+		this.player.setFill(Color.BEIGE);
+		this.enemy.setFill(Color.BEIGE);
+		this.winner.setFill(Color.BEIGE);
+		this.outcome.setFill(Color.BEIGE);
 	}
 	
 	public int getNumberOfButtons() {
