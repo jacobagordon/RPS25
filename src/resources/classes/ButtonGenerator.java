@@ -18,6 +18,8 @@ public class ButtonGenerator {
 	Text enemy = new Text("");
 	Text outcome = new Text("");
 	Text winner = new Text("");
+	Text cSLabel = new Text("Current Selection:");
+	Text currentSelection = new Text("None");
 	
 	public ButtonGenerator(Gestures[] gestures, StackPane layout) {
 		String path = "file:C:\\Users\\jacwe\\Desktop\\Github\\RPS25\\src\\resources\\images\\gestures\\";
@@ -28,6 +30,8 @@ public class ButtonGenerator {
 		layout.getChildren().add(enemy);
 		layout.getChildren().add(outcome);
 		layout.getChildren().add(winner);
+		layout.getChildren().add(currentSelection);
+		layout.getChildren().add(cSLabel);
 		
 		for (int a=0; a<25; a++) {
 			double theta = (Math.PI*2) / 25;
@@ -56,9 +60,15 @@ public class ButtonGenerator {
 			this.buttonWheel[i].setTranslateY(buttonLocations[i][1]);
 			this.buttonWheel[i].setTooltip(new Tooltip(gestures[i].getName()));
 		
-			this.buttonWheel[i].setOnMouseEntered(e -> this.buttonWheel[choice].getStyleClass().add("gesture-button-hovered"));
-	        this.buttonWheel[i].setOnMouseExited(e -> this.buttonWheel[choice].getStyleClass().remove("gesture-button-hovered"));
-		}
+			this.buttonWheel[i].setOnMouseEntered(e -> {
+				this.buttonWheel[choice].getStyleClass().add("gesture-button-hovered");
+				this.currentSelection.setText(gestures[choice].getName());
+			});
+	        this.buttonWheel[i].setOnMouseExited(e -> {
+	        	this.buttonWheel[choice].getStyleClass().remove("gesture-button-hovered");
+	        	this.currentSelection.setText("None");
+	        });
+	    }
 	}
 	
 	private void determineWinner(Gestures player, Gestures enemy, StackPane layout) {
@@ -84,10 +94,17 @@ public class ButtonGenerator {
 		this.outcome.setTranslateY(50);
 		this.winner.setTranslateY(75);
 		
+		this.currentSelection.setTranslateY(375);
+		this.currentSelection.setTranslateX(350);
+		this.cSLabel.setTranslateY(350);
+		this.cSLabel.setTranslateX(350);
+		
 		this.player.setFill(Color.BEIGE);
 		this.enemy.setFill(Color.BEIGE);
 		this.winner.setFill(Color.BEIGE);
 		this.outcome.setFill(Color.BEIGE);
+		this.currentSelection.setFill(Color.BEIGE);
+		this.cSLabel.setFill(Color.BEIGE);
 	}
 	
 	public int getNumberOfButtons() {
